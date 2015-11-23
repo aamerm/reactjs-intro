@@ -1,0 +1,35 @@
+import React from 'react';
+import Header from './header';
+import TodoList from './todo_list';
+
+class Todos extends React.Component {
+
+constructor(){
+	super();
+	this.state ={
+		todos: [
+			{id:1, text: "Learn React.js"},
+			{id:2, text: "Build an application in React.js"},
+			{id:3, text: "Become Rich"}
+		]
+	};
+}
+
+deleteTodo(todo){
+	const index=this.state.todos.indexOf(todo);
+	this.state.todos.splice(index,1);
+	this.setState(this.state);
+}
+
+render(){
+	return <div> 
+	<Header />
+	<TodoList 
+		onDeleteTodo={this.deleteTodo.bind(this)}
+		todos={this.state.todos}	/>
+	</div>;
+}
+
+}
+
+export default Todos;

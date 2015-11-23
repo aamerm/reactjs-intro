@@ -1,0 +1,20 @@
+installation:
+https://nodejs.org/en/
+https://github.com/abdulsattar/react-workshop
+
+
+BOM - browser object model
+DOM - document object model
+Ajax
+jQuery
+
+
+React
+Just the V in MVC
+Virtual DOM
+
+
+Flux Architecture
+unidirectional data flow
+
+action -> dispatcher
